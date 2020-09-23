@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+
+<body onload="disconnect()">
+    <noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being enabled. Please enable
+        Javascript and reload this page!</h2></noscript>
+    <div>
+        <div>
+            <button id="connect" onclick="connect();">Connect USD/JPY (M1) Market Data Websocket</button>
+            <button id="disconnect" disabled="disabled" onclick="disconnect();">Disconnect Websocket</button>
+        </div>
+        <div id="conversationDiv" style="width:1000px; height:300px; overflow: auto;">
+            <p id="response" style="font: 15px sans-serif"></p>
+        </div>
+        <br/>
+    </div>
+</body>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="http://techanjs.org/techan.min.js"></script>
+<script src="sockjs-0.3.4.js"></script>
+<script src="stomp.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="app.js"></script>
+
